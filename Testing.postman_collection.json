@@ -1,0 +1,355 @@
+{
+	"info": {
+		"_postman_id": "ec7a9ca7-2244-421f-acce-fd76388d89a5",
+		"name": "Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://tests.local/api/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "PsiaorHNf1@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Qwerty123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tests.local/api/login",
+					"protocol": "http",
+					"host": [
+						"tests",
+						"local"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				},
+				"description": "Login request"
+			},
+			"response": []
+		},
+		{
+			"name": "http://tests.local/api/customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlMDc3ZGM2ZjBiYjkwYTIzZmFiZmUxZDRlMzc0YjBhNTAwZTY5NjdkYTYxZWRkNWFkYmQ4MjBjYzIwOTJhNTdjNjllZDMyMDhiZGQxYWM1In0.eyJhdWQiOiIxIiwianRpIjoiY2UwNzdkYzZmMGJiOTBhMjNmYWJmZTFkNGUzNzRiMGE1MDBlNjk2N2RhNjFlZGQ1YWRiZDgyMGNjMjA5MmE1N2M2OWVkMzIwOGJkZDFhYzUiLCJpYXQiOjE1NTQyMDQwMTIsIm5iZiI6MTU1NDIwNDAxMiwiZXhwIjoxNTg1ODI2NDEyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.KBGxk7utNKRRhJ4ynD-LcauUeGg2RQtIva8e5lU43xEMbUsKISU84kM_L8zfEXGqhPcsdU1MfLdxfORVy_2lXuU41zmmb_bSyJ2hhdrSDgbzuDuhe5ZmYvOt-Pm2h4V3S31CrB-EpVCEpLvNhnBdGLMflzdamoT7VLNp6CEjxik4LojMaxKJEDRtYmvB7R8OyTbaDSaslmwl6acKUQ_oiB3Eo3XcfwscXRorMQZJd2yKGgf5tUKeaHcgZrZKe_fqg75yvVqqxMP4ZwYYCjErT7_1wtDpSScDADmLvzoKaV8-WvOeOxgFMHS18Kd9YMNlN0b1cLFohqh_iYkt-7LBRldaN0SybSFQeqO8PeMssI-OFjVH5tqHsMcOtgOPb8m-hyuhBANKcFGe-JRZ2XNdqR8aSzax3rGDnt_0OIvMnDc33dtC36qdoU01YNFr-UtMXCpx2mYYiTtioJT9ccT_4gtFlDjNZzxO8BP8gSac8-Zc6k8lGnMBs04k2VZCxH2mzmc9OEEb0Pn3UES8ai1a1_dFAzLuGYg0r75W1VVyzUc1Fex0pRlVWAx1fMwfZtbMTWPMj-xUenWzWzqw837znewF5uM0ULPb7IyaIfwimw4_n8Z73B_WJZVwq5XZU25ehQjyN3TZMmFNb0tzYE4Aye2kFV4LSSGOjNcFN3Ksrxk",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Testing",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "bla@bla.com",
+							"type": "text"
+						},
+						{
+							"key": "cnp",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tests.local/api/customer",
+					"protocol": "http",
+					"host": [
+						"tests",
+						"local"
+					],
+					"path": [
+						"api",
+						"customer"
+					]
+				},
+				"description": "Creating customer"
+			},
+			"response": []
+		},
+		{
+			"name": "http://tests.local/api/transaction",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlMDc3ZGM2ZjBiYjkwYTIzZmFiZmUxZDRlMzc0YjBhNTAwZTY5NjdkYTYxZWRkNWFkYmQ4MjBjYzIwOTJhNTdjNjllZDMyMDhiZGQxYWM1In0.eyJhdWQiOiIxIiwianRpIjoiY2UwNzdkYzZmMGJiOTBhMjNmYWJmZTFkNGUzNzRiMGE1MDBlNjk2N2RhNjFlZGQ1YWRiZDgyMGNjMjA5MmE1N2M2OWVkMzIwOGJkZDFhYzUiLCJpYXQiOjE1NTQyMDQwMTIsIm5iZiI6MTU1NDIwNDAxMiwiZXhwIjoxNTg1ODI2NDEyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.KBGxk7utNKRRhJ4ynD-LcauUeGg2RQtIva8e5lU43xEMbUsKISU84kM_L8zfEXGqhPcsdU1MfLdxfORVy_2lXuU41zmmb_bSyJ2hhdrSDgbzuDuhe5ZmYvOt-Pm2h4V3S31CrB-EpVCEpLvNhnBdGLMflzdamoT7VLNp6CEjxik4LojMaxKJEDRtYmvB7R8OyTbaDSaslmwl6acKUQ_oiB3Eo3XcfwscXRorMQZJd2yKGgf5tUKeaHcgZrZKe_fqg75yvVqqxMP4ZwYYCjErT7_1wtDpSScDADmLvzoKaV8-WvOeOxgFMHS18Kd9YMNlN0b1cLFohqh_iYkt-7LBRldaN0SybSFQeqO8PeMssI-OFjVH5tqHsMcOtgOPb8m-hyuhBANKcFGe-JRZ2XNdqR8aSzax3rGDnt_0OIvMnDc33dtC36qdoU01YNFr-UtMXCpx2mYYiTtioJT9ccT_4gtFlDjNZzxO8BP8gSac8-Zc6k8lGnMBs04k2VZCxH2mzmc9OEEb0Pn3UES8ai1a1_dFAzLuGYg0r75W1VVyzUc1Fex0pRlVWAx1fMwfZtbMTWPMj-xUenWzWzqw837znewF5uM0ULPb7IyaIfwimw4_n8Z73B_WJZVwq5XZU25ehQjyN3TZMmFNb0tzYE4Aye2kFV4LSSGOjNcFN3Ksrxk",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "customerId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tests.local/api/transaction",
+					"protocol": "http",
+					"host": [
+						"tests",
+						"local"
+					],
+					"path": [
+						"api",
+						"transaction"
+					]
+				},
+				"description": "Save transaction"
+			},
+			"response": []
+		},
+		{
+			"name": "http://tests.local/api/transaction-all",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlMDc3ZGM2ZjBiYjkwYTIzZmFiZmUxZDRlMzc0YjBhNTAwZTY5NjdkYTYxZWRkNWFkYmQ4MjBjYzIwOTJhNTdjNjllZDMyMDhiZGQxYWM1In0.eyJhdWQiOiIxIiwianRpIjoiY2UwNzdkYzZmMGJiOTBhMjNmYWJmZTFkNGUzNzRiMGE1MDBlNjk2N2RhNjFlZGQ1YWRiZDgyMGNjMjA5MmE1N2M2OWVkMzIwOGJkZDFhYzUiLCJpYXQiOjE1NTQyMDQwMTIsIm5iZiI6MTU1NDIwNDAxMiwiZXhwIjoxNTg1ODI2NDEyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.KBGxk7utNKRRhJ4ynD-LcauUeGg2RQtIva8e5lU43xEMbUsKISU84kM_L8zfEXGqhPcsdU1MfLdxfORVy_2lXuU41zmmb_bSyJ2hhdrSDgbzuDuhe5ZmYvOt-Pm2h4V3S31CrB-EpVCEpLvNhnBdGLMflzdamoT7VLNp6CEjxik4LojMaxKJEDRtYmvB7R8OyTbaDSaslmwl6acKUQ_oiB3Eo3XcfwscXRorMQZJd2yKGgf5tUKeaHcgZrZKe_fqg75yvVqqxMP4ZwYYCjErT7_1wtDpSScDADmLvzoKaV8-WvOeOxgFMHS18Kd9YMNlN0b1cLFohqh_iYkt-7LBRldaN0SybSFQeqO8PeMssI-OFjVH5tqHsMcOtgOPb8m-hyuhBANKcFGe-JRZ2XNdqR8aSzax3rGDnt_0OIvMnDc33dtC36qdoU01YNFr-UtMXCpx2mYYiTtioJT9ccT_4gtFlDjNZzxO8BP8gSac8-Zc6k8lGnMBs04k2VZCxH2mzmc9OEEb0Pn3UES8ai1a1_dFAzLuGYg0r75W1VVyzUc1Fex0pRlVWAx1fMwfZtbMTWPMj-xUenWzWzqw837znewF5uM0ULPb7IyaIfwimw4_n8Z73B_WJZVwq5XZU25ehQjyN3TZMmFNb0tzYE4Aye2kFV4LSSGOjNcFN3Ksrxk",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://tests.local/api/transaction-all",
+					"protocol": "http",
+					"host": [
+						"tests",
+						"local"
+					],
+					"path": [
+						"api",
+						"transaction-all"
+					]
+				},
+				"description": "get transactions"
+			},
+			"response": []
+		},
+		{
+			"name": "http://tests.local/api/transaction/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlMDc3ZGM2ZjBiYjkwYTIzZmFiZmUxZDRlMzc0YjBhNTAwZTY5NjdkYTYxZWRkNWFkYmQ4MjBjYzIwOTJhNTdjNjllZDMyMDhiZGQxYWM1In0.eyJhdWQiOiIxIiwianRpIjoiY2UwNzdkYzZmMGJiOTBhMjNmYWJmZTFkNGUzNzRiMGE1MDBlNjk2N2RhNjFlZGQ1YWRiZDgyMGNjMjA5MmE1N2M2OWVkMzIwOGJkZDFhYzUiLCJpYXQiOjE1NTQyMDQwMTIsIm5iZiI6MTU1NDIwNDAxMiwiZXhwIjoxNTg1ODI2NDEyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.KBGxk7utNKRRhJ4ynD-LcauUeGg2RQtIva8e5lU43xEMbUsKISU84kM_L8zfEXGqhPcsdU1MfLdxfORVy_2lXuU41zmmb_bSyJ2hhdrSDgbzuDuhe5ZmYvOt-Pm2h4V3S31CrB-EpVCEpLvNhnBdGLMflzdamoT7VLNp6CEjxik4LojMaxKJEDRtYmvB7R8OyTbaDSaslmwl6acKUQ_oiB3Eo3XcfwscXRorMQZJd2yKGgf5tUKeaHcgZrZKe_fqg75yvVqqxMP4ZwYYCjErT7_1wtDpSScDADmLvzoKaV8-WvOeOxgFMHS18Kd9YMNlN0b1cLFohqh_iYkt-7LBRldaN0SybSFQeqO8PeMssI-OFjVH5tqHsMcOtgOPb8m-hyuhBANKcFGe-JRZ2XNdqR8aSzax3rGDnt_0OIvMnDc33dtC36qdoU01YNFr-UtMXCpx2mYYiTtioJT9ccT_4gtFlDjNZzxO8BP8gSac8-Zc6k8lGnMBs04k2VZCxH2mzmc9OEEb0Pn3UES8ai1a1_dFAzLuGYg0r75W1VVyzUc1Fex0pRlVWAx1fMwfZtbMTWPMj-xUenWzWzqw837znewF5uM0ULPb7IyaIfwimw4_n8Z73B_WJZVwq5XZU25ehQjyN3TZMmFNb0tzYE4Aye2kFV4LSSGOjNcFN3Ksrxk",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "amount",
+							"value": "1212",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tests.local/api/transaction/1",
+					"protocol": "http",
+					"host": [
+						"tests",
+						"local"
+					],
+					"path": [
+						"api",
+						"transaction",
+						"1"
+					]
+				},
+				"description": "Updating transaction"
+			},
+			"response": []
+		},
+		{
+			"name": "http://tests.local/api/transaction/1/1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlMDc3ZGM2ZjBiYjkwYTIzZmFiZmUxZDRlMzc0YjBhNTAwZTY5NjdkYTYxZWRkNWFkYmQ4MjBjYzIwOTJhNTdjNjllZDMyMDhiZGQxYWM1In0.eyJhdWQiOiIxIiwianRpIjoiY2UwNzdkYzZmMGJiOTBhMjNmYWJmZTFkNGUzNzRiMGE1MDBlNjk2N2RhNjFlZGQ1YWRiZDgyMGNjMjA5MmE1N2M2OWVkMzIwOGJkZDFhYzUiLCJpYXQiOjE1NTQyMDQwMTIsIm5iZiI6MTU1NDIwNDAxMiwiZXhwIjoxNTg1ODI2NDEyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.KBGxk7utNKRRhJ4ynD-LcauUeGg2RQtIva8e5lU43xEMbUsKISU84kM_L8zfEXGqhPcsdU1MfLdxfORVy_2lXuU41zmmb_bSyJ2hhdrSDgbzuDuhe5ZmYvOt-Pm2h4V3S31CrB-EpVCEpLvNhnBdGLMflzdamoT7VLNp6CEjxik4LojMaxKJEDRtYmvB7R8OyTbaDSaslmwl6acKUQ_oiB3Eo3XcfwscXRorMQZJd2yKGgf5tUKeaHcgZrZKe_fqg75yvVqqxMP4ZwYYCjErT7_1wtDpSScDADmLvzoKaV8-WvOeOxgFMHS18Kd9YMNlN0b1cLFohqh_iYkt-7LBRldaN0SybSFQeqO8PeMssI-OFjVH5tqHsMcOtgOPb8m-hyuhBANKcFGe-JRZ2XNdqR8aSzax3rGDnt_0OIvMnDc33dtC36qdoU01YNFr-UtMXCpx2mYYiTtioJT9ccT_4gtFlDjNZzxO8BP8gSac8-Zc6k8lGnMBs04k2VZCxH2mzmc9OEEb0Pn3UES8ai1a1_dFAzLuGYg0r75W1VVyzUc1Fex0pRlVWAx1fMwfZtbMTWPMj-xUenWzWzqw837znewF5uM0ULPb7IyaIfwimw4_n8Z73B_WJZVwq5XZU25ehQjyN3TZMmFNb0tzYE4Aye2kFV4LSSGOjNcFN3Ksrxk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://tests.local/api/transaction/1/1",
+					"protocol": "http",
+					"host": [
+						"tests",
+						"local"
+					],
+					"path": [
+						"api",
+						"transaction",
+						"1",
+						"1"
+					]
+				},
+				"description": "get info by one transaction of customer"
+			},
+			"response": []
+		},
+		{
+			"name": "http://tests.local/api/transaction/2",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlMDc3ZGM2ZjBiYjkwYTIzZmFiZmUxZDRlMzc0YjBhNTAwZTY5NjdkYTYxZWRkNWFkYmQ4MjBjYzIwOTJhNTdjNjllZDMyMDhiZGQxYWM1In0.eyJhdWQiOiIxIiwianRpIjoiY2UwNzdkYzZmMGJiOTBhMjNmYWJmZTFkNGUzNzRiMGE1MDBlNjk2N2RhNjFlZGQ1YWRiZDgyMGNjMjA5MmE1N2M2OWVkMzIwOGJkZDFhYzUiLCJpYXQiOjE1NTQyMDQwMTIsIm5iZiI6MTU1NDIwNDAxMiwiZXhwIjoxNTg1ODI2NDEyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.KBGxk7utNKRRhJ4ynD-LcauUeGg2RQtIva8e5lU43xEMbUsKISU84kM_L8zfEXGqhPcsdU1MfLdxfORVy_2lXuU41zmmb_bSyJ2hhdrSDgbzuDuhe5ZmYvOt-Pm2h4V3S31CrB-EpVCEpLvNhnBdGLMflzdamoT7VLNp6CEjxik4LojMaxKJEDRtYmvB7R8OyTbaDSaslmwl6acKUQ_oiB3Eo3XcfwscXRorMQZJd2yKGgf5tUKeaHcgZrZKe_fqg75yvVqqxMP4ZwYYCjErT7_1wtDpSScDADmLvzoKaV8-WvOeOxgFMHS18Kd9YMNlN0b1cLFohqh_iYkt-7LBRldaN0SybSFQeqO8PeMssI-OFjVH5tqHsMcOtgOPb8m-hyuhBANKcFGe-JRZ2XNdqR8aSzax3rGDnt_0OIvMnDc33dtC36qdoU01YNFr-UtMXCpx2mYYiTtioJT9ccT_4gtFlDjNZzxO8BP8gSac8-Zc6k8lGnMBs04k2VZCxH2mzmc9OEEb0Pn3UES8ai1a1_dFAzLuGYg0r75W1VVyzUc1Fex0pRlVWAx1fMwfZtbMTWPMj-xUenWzWzqw837znewF5uM0ULPb7IyaIfwimw4_n8Z73B_WJZVwq5XZU25ehQjyN3TZMmFNb0tzYE4Aye2kFV4LSSGOjNcFN3Ksrxk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://tests.local/api/transaction/2",
+					"protocol": "http",
+					"host": [
+						"tests",
+						"local"
+					],
+					"path": [
+						"api",
+						"transaction",
+						"2"
+					]
+				},
+				"description": "Deleting transaction"
+			},
+			"response": []
+		},
+		{
+			"name": "http://tests.local/api/transaction/search?amount=12&limit=1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlMDc3ZGM2ZjBiYjkwYTIzZmFiZmUxZDRlMzc0YjBhNTAwZTY5NjdkYTYxZWRkNWFkYmQ4MjBjYzIwOTJhNTdjNjllZDMyMDhiZGQxYWM1In0.eyJhdWQiOiIxIiwianRpIjoiY2UwNzdkYzZmMGJiOTBhMjNmYWJmZTFkNGUzNzRiMGE1MDBlNjk2N2RhNjFlZGQ1YWRiZDgyMGNjMjA5MmE1N2M2OWVkMzIwOGJkZDFhYzUiLCJpYXQiOjE1NTQyMDQwMTIsIm5iZiI6MTU1NDIwNDAxMiwiZXhwIjoxNTg1ODI2NDEyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.KBGxk7utNKRRhJ4ynD-LcauUeGg2RQtIva8e5lU43xEMbUsKISU84kM_L8zfEXGqhPcsdU1MfLdxfORVy_2lXuU41zmmb_bSyJ2hhdrSDgbzuDuhe5ZmYvOt-Pm2h4V3S31CrB-EpVCEpLvNhnBdGLMflzdamoT7VLNp6CEjxik4LojMaxKJEDRtYmvB7R8OyTbaDSaslmwl6acKUQ_oiB3Eo3XcfwscXRorMQZJd2yKGgf5tUKeaHcgZrZKe_fqg75yvVqqxMP4ZwYYCjErT7_1wtDpSScDADmLvzoKaV8-WvOeOxgFMHS18Kd9YMNlN0b1cLFohqh_iYkt-7LBRldaN0SybSFQeqO8PeMssI-OFjVH5tqHsMcOtgOPb8m-hyuhBANKcFGe-JRZ2XNdqR8aSzax3rGDnt_0OIvMnDc33dtC36qdoU01YNFr-UtMXCpx2mYYiTtioJT9ccT_4gtFlDjNZzxO8BP8gSac8-Zc6k8lGnMBs04k2VZCxH2mzmc9OEEb0Pn3UES8ai1a1_dFAzLuGYg0r75W1VVyzUc1Fex0pRlVWAx1fMwfZtbMTWPMj-xUenWzWzqw837znewF5uM0ULPb7IyaIfwimw4_n8Z73B_WJZVwq5XZU25ehQjyN3TZMmFNb0tzYE4Aye2kFV4LSSGOjNcFN3Ksrxk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://tests.local/api/transaction/search?amount=12&limit=1&offset=1",
+					"protocol": "http",
+					"host": [
+						"tests",
+						"local"
+					],
+					"path": [
+						"api",
+						"transaction",
+						"search"
+					],
+					"query": [
+						{
+							"key": "amount",
+							"value": "12"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "offset",
+							"value": "1"
+						}
+					]
+				},
+				"description": "searching transactions"
+			},
+			"response": []
+		}
+	]
+}
