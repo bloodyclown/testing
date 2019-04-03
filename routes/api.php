@@ -16,14 +16,13 @@ use Illuminate\Http\Request;
 
 Route::post('login', 'Api\v1\CustomerController@login');
 Route::group(['middleware' => 'auth:api'], function(){
-    Route::post('customer', 'Api\v1\CustomerController@insert');
+    Route::post('customer', 'Api\v1\CustomerController@store');
     /**
      * Transactions query
-     */
-    Route::get('transaction', 'Api\v1\TransactionController@index');
-    Route::post('transaction', 'Api\v1\TransactionController@insert');
-    Route::get('transaction/search', 'Api\v1\TransactionController@search');
+     */    
+    Route::post('transaction', 'Api\v1\TransactionController@store');
     Route::put('transaction/{transactionId}', 'Api\v1\TransactionController@update');
-    Route::delete('transaction/{transactionId}', 'Api\v1\TransactionController@delete');
+    Route::delete('transaction/{transactionId}', 'Api\v1\TransactionController@destroy');
+    Route::get('transaction/search', 'Api\v1\TransactionController@search');
     Route::get('transaction/{customerId}/{transactionId}', 'Api\v1\TransactionController@view');
 });

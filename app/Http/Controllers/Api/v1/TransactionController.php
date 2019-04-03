@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\v1;
 use App\Http\Controllers\Controller;
 use App\Transaction;
 use Illuminate\Http\Request;
+use App\Http\Requests\TransactionRequest;
 use Illuminate\Support\Facades\Auth;
 
 class TransactionController extends Controller
@@ -16,6 +17,33 @@ class TransactionController extends Controller
         $model = Transaction::where('customerId', $user->customerId)->get();
 
         return response()->json(['data' => $model]);
+    }
+
+    /**
+     * Creating transaction
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function store(TransactionRequest $request)
+    {
+        $model = Transaction::create($request->toArray());
+
+        return response()->json($model);
+    }
+
+    /**
+     * Updating transaction
+     * @param Request $request
+     * @param int $transactionId
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function update(TransactionRequest $request, $transactionId)
+    {
+        $model         = Transaction::findOrFail($transactionId);
+        $model->amount = $request->input('amount');
+        $model->save();
+
+        return response()->json($model);
     }
 
     /**
@@ -38,47 +66,11 @@ class TransactionController extends Controller
     }
 
     /**
-     * Creating transaction
-     * @param Request $request
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public function insert(Request $request)
-    {
-        $this->validate($request,
-            [
-                'customerId' => 'required|exists:users,customerId',
-                'amount'     => 'required|regex:/^\d+(\.\d{1,2})?$/'
-        ]);
-
-        $model = Transaction::create($request->toArray());
-
-        return response()->json($model);
-    }
-
-    /**
-     * Updating transaction
-     * @param Request $request
-     * @param int $transactionId
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public function update(Request $request, $transactionId)
-    {
-        $this->validate($request, [
-            'amount' => 'required|regex:/^\d+(\.\d{1,2})?$/'
-        ]);
-        $model         = Transaction::findOrFail($transactionId);
-        $model->amount = $request->input('amount');
-        $model->save();
-
-        return response()->json($model);
-    }
-
-    /**
      * Deleting transaction
      * @param int $transactionId
      * @return \Illuminate\Http\JsonResponse
      */
-    public function delete($transactionId)
+    public function destroy($transactionId)
     {
         $result = 'fail';
         if ($model  = Transaction::find($transactionId)) {

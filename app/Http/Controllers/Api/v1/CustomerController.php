@@ -17,13 +17,13 @@ class CustomerController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
      */
-    public function insert(Request $request)
+    public function store(Request $request)
     {
         $this->validate($request,
             [
-            'name'  => 'required|string',
-            'email' => 'required|email|unique:users,email',
-            'cnp'   => 'required|boolean'
+                'name'  => 'required|string',
+                'email' => 'required|email|unique:users,email',
+                'cnp'   => 'required|boolean'
         ]);
         $data             = $request->toArray();
         $data['password'] = Hash::make(Str::random(8)); //new random pswd, in future need to sent this password via email
@@ -47,11 +47,6 @@ class CustomerController extends Controller
         } else {
             return response()->json(['error' => 'Unauthenticated'], 401);
         }
-    }
-
-    public function details()
-    {
-        return response()->json(Auth::user());
     }
 
 }
